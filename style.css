@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     background-color: #27355C !important;
 }
@@ -8,4 +12,37 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.quiz-card{
+    width: 35rem;
+}
+
+.question-footer{
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+}
+
+.question-footer p{
+    margin-top: unset;
+    margin-bottom: unset;
+}
+
+.question-footer button {
+    padding: 8px;
+    background-color: #DAE0F5;
+    border-radius: 30px;
+    color: white;
+    outline: none;
+}
+
+.question-footer button:hover{
+    background-color: #DAE0F5;
+}
+
+.question-footer button:active{
+    background-color: #DAE0F5;
 }
