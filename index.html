@@ -17,7 +17,7 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="init()">
 
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
@@ -30,35 +30,35 @@
             <img src="./img/Group 5.png" class="card-img-top" alt="Quiz app picture">
             <div class="card-body">
 
-                <h3 class="mb-3">Frage:</h3>
+                <h3 id="questiontext" class="mb-3">Frage:</h3>
 
                 <div class="card mb-3">
-                    <div class="card-body">
+                    <div id="answer_1" class="card-body">
                         Antwort 1
                     </div>
                 </div>
 
                 <div class="card mb-3">
-                    <div class="card-body">
+                    <div id="answer_2" class="card-body">
                         Antwort 2
                     </div>
                 </div>
 
                 <div class="card mb-3">
-                    <div class="card-body">
+                    <div id="answer_3" class="card-body">
                         Antwort 3
                     </div>
                 </div>
 
                 <div class="card mb-3">
-                    <div class="card-body">
+                    <div id="answer_4" class="card-body">
                         Antwort 4
                     </div>
                 </div>
 
                 <div class="question-footer mb-3">
                     <button class="btn"><img src="./img/arrow_back_ios_new_24dp_434343_FILL1_wght0_GRAD0_opsz24.svg" alt="arrow left"></button>
-                    <p><b>1</b> von <b>5</b> Fragen</p>
+                    <p><b>1</b> von <b id="all-questions">7</b> Fragen</p>
                     <button class="btn"><img src="./img/arrow_forward_ios_24dp_434343_FILL1_wght0_GRAD0_opsz24.svg" alt="arrow right"></button>
                 </div>
 
