@@ -18,6 +18,11 @@ body{
     width: 35rem;
 }
 
+.quiz-answer-card:hover{
+    cursor: pointer;
+    background-color: rgba(24,60,232, 0.2);
+}
+
 .question-footer{
     border-top: 1px solid black;
     display: flex;
@@ -46,3 +51,8 @@ body{
 .question-footer button:active{
     background-color: #DAE0F5;
 }
+
+/* 
+bg-danger = rot
+bg-succes = grün
+*/
