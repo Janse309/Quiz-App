@@ -23,7 +23,7 @@ function answer(selection) {
     let idOfRightAnswer = `answer_${question['right_answer']}`
 
     if (selectedQuestionNumber == question['right_answer']) {
-        document.getElementById(selection).parentNode.classList.add('bg-success', 'text-white');
+        document.getElementById(selection).parentNode.classList.add('bg-success', 'text-white'); // wählt das übergeordnete tag aus
     } else {
         document.getElementById(selection).parentNode.classList.add('bg-danger', 'text-white');
         document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success', 'text-white');
