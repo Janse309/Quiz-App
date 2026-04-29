@@ -24,12 +24,12 @@ let questions = [
         "right_answer": 3
     },
     {
-        "question": "Welches HTML-Tag wird verwendet, um eine JavaScript-Datei einzubinden?",
-        "answer_1": "<script>",
-        "answer_2": "<javascript>",
-        "answer_3": "<js>",
-        "answer_4": "<link>",
-        "right_answer": 1
+        "question": "Welcher Datentyp wird in JavaScript verwendet, um Wahrheitswerte (true/false) zu speichern?",
+        "answer_1": "String",
+        "answer_2": "Number",
+        "answer_3": "Boolean",
+        "answer_4": "Object",
+        "right_answer": 3
     },
     {
         "question": "Wie nennt man den Vorgang, Fehler in einem Programm zu finden und zu beheben?",
