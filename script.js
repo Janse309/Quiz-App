@@ -32,5 +32,6 @@ function answer(selection) {
 }
 
 function nextQuestion() {
-    currentQuestion++;
+    currentQuestion++; // z.B. von 0 auf 1
+    showQuestion();
 }
