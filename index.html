@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="./style.css">
     <script src="./scripts/db.js" defer></script>
+    <script src="./scripts/template.js" defer></script>
     <script src="./script.js"></script>
 
 
@@ -30,7 +31,13 @@
     <section class="container">
         <div class="card quiz-card">
             <img src="./img/Group 5.png" class="card-img-top" alt="Quiz app picture">
-            <div class="card-body">
+
+            <div id="finish" class="card-body d_none">
+
+                Quiz Beendet
+            </div>
+
+            <div id="endscreen" class="card-body">
 
                 <h3 id="questiontext" class="mb-3">Frage:</h3>
 
@@ -60,7 +67,9 @@
 
                 <div class="question-footer mb-3">
                     <button class="btn"><img src="./img/arrow_back_ios_new_24dp_434343_FILL1_wght0_GRAD0_opsz24.svg" alt="arrow left"></button>
-                    <p><b>1</b> von <b id="all-questions">7</b> Fragen</p>
+                    <span> 
+                     <b id="question-number">1</b> von <b id="all-questions">7</b> Fragen
+                    </span>
                     <button onclick="nextQuestion()" disabled id="next-button" class="btn"><img src="./img/arrow_forward_ios_24dp_434343_FILL1_wght0_GRAD0_opsz24.svg" alt="arrow right"></button>
                 </div>
 

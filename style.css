@@ -56,3 +56,7 @@ body{
 bg-danger = rot
 bg-succes = grün
 */
+
+.d_none{
+    display: none;
+}
