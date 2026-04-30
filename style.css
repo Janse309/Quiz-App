@@ -18,6 +18,16 @@ body{
     width: 35rem;
 }
 
+.complete-quiz{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.complete-quiz button:hover{
+    background-color: rgba(24,60,232, 0.2);
+}
+
 .quiz-answer-card:hover{
     cursor: pointer;
     background-color: rgba(24,60,232, 0.2);
