@@ -32,17 +32,17 @@
         <div class="card quiz-card">
             <img src="./img/Group 5.png" class="card-img-top" alt="Quiz app picture">
 
-            <div id="finish" class="card-body complete-quiz">
+            <div id="endscreen" class="card-body complete-quiz d_none">
                 <div>
                 <span>Quiz Beendet</span>
                 </div>
                 <div>
-                <button class="btn text-white">share</button>
-                <button class="btn text-white">again</button>
+                <button onclick="shareResult()" class="btn text-white">share</button>
+                <button onclick="playAgain()" class="btn text-white">again</button>
                 </div>
             </div>
 
-             <div id="endscreen" class="card-body d_none"> <!-- d_none nur bis ich ich die finish section fertig gecoded habe -->
+             <div id="question_screen" class="card-body"> <!-- d_none nur bis ich ich die finish section fertig gecoded habe -->
 
                 <h3 id="questiontext" class="mb-3">Frage:</h3>
 

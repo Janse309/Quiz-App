@@ -51,6 +51,10 @@ function resetAnswerButtons() {
 }
 
 function showEndScreen() {
-    document.getElementById('endscreen').classList.add('d_none');
-    document.getElementById('finish').classList.remove('d_none');
+    document.getElementById('question_screen').classList.add('d_none');
+    document.getElementById('endscreen').classList.remove('d_none');
+}
+
+function playAgain() {
+    showQuestion();
 }
