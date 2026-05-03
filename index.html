@@ -11,13 +11,18 @@
     <script src="./scripts/template.js" defer></script>
     <script src="./script.js"></script>
 
-
     <!-- bootstrap file -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <!-- Schriftart -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body onload="init()">
@@ -29,20 +34,23 @@
     </nav>
 
     <section class="container">
+        
         <div class="card quiz-card">
             <img src="./img/Group 5.png" class="card-img-top" alt="Quiz app picture">
 
             <div id="endscreen" class="card-body complete-quiz d_none">
-                <div>
-                <span>Quiz Beendet</span>
+                <div class="endscreen-text mb-3">
+                    <h2 class="endscreen-headline"><mark>Herzlichen Glückwunsch!</mark></h2>
+                    <span class="finish-quiz-text">Quiz Beendet</span>
                 </div>
-                <div>
-                <button onclick="shareResult()" class="btn text-white">share</button>
-                <button onclick="playAgain()" class="btn text-white">again</button>
+                <div class="pb-3">
+                    <button onclick="shareResult()" class="btn text-white">share</button>
+                    <button onclick="playAgain()" class="btn text-white">play again</button>
                 </div>
             </div>
 
-             <div id="question_screen" class="card-body"> <!-- d_none nur bis ich ich die finish section fertig gecoded habe -->
+            <div id="question_screen" class="card-body">
+                <!-- d_none nur bis ich ich die finish section fertig gecoded habe -->
 
                 <h3 id="questiontext" class="mb-3">Frage:</h3>
 
@@ -71,11 +79,14 @@
                 </div>
 
                 <div class="question-footer mb-3">
-                    <button class="btn"><img src="./img/arrow_back_ios_new_24dp_434343_FILL1_wght0_GRAD0_opsz24.svg" alt="arrow left"></button>
-                    <span> 
-                     <b id="question-number">1</b> von <b id="all-questions">7</b> Fragen
+                    <button class="btn"><img src="./img/arrow_back_ios_new_24dp_434343_FILL1_wght0_GRAD0_opsz24.svg"
+                            alt="arrow left"></button>
+                    <span>
+                        <b id="question-number">1</b> von <b id="all-questions">7</b> Fragen
                     </span>
-                    <button onclick="nextQuestion()" disabled id="next-button" class="btn"><img src="./img/arrow_forward_ios_24dp_434343_FILL1_wght0_GRAD0_opsz24.svg" alt="arrow right"></button>
+                    <button onclick="nextQuestion()" disabled id="next-button" class="btn"><img
+                            src="./img/arrow_forward_ios_24dp_434343_FILL1_wght0_GRAD0_opsz24.svg"
+                            alt="arrow right"></button>
                 </div>
 
             </div>

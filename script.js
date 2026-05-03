@@ -56,5 +56,8 @@ function showEndScreen() {
 }
 
 function playAgain() {
-    showQuestion();
+    document.getElementById('endscreen').classList.add('d_none');
+    document.getElementById('question_screen').classList.remove('d_none');
+
+    init();
 }
