@@ -53,11 +53,14 @@ function resetAnswerButtons() {
 function showEndScreen() {
     document.getElementById('question_screen').classList.add('d_none');
     document.getElementById('endscreen').classList.remove('d_none');
+    document.getElementById('main_img').classList.add('d_none');
 }
 
 function playAgain() {
     document.getElementById('endscreen').classList.add('d_none');
     document.getElementById('question_screen').classList.remove('d_none');
 
-    init();
+    document.getElementById('all-questions').innerHTML = [];
+
+    showQuestion();
 }
