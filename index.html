@@ -36,8 +36,13 @@
     <section class="container">
 
         <div class="card quiz-card">
-            <img id="header-image" src="./img/Group 5.png" class="card-img-top" alt="Quiz app picture">
 
+            <img id="header-image" src="./img/Group 5.png" class="mb-3" alt="Quiz app picture">
+
+            <div class="progress" role="progressbar">
+                <div id="progress-bar" class="progress-bar" style="width: 0%"></div>
+            </div>
+            
             <div id="endscreen" class="card-body complete-quiz d_none">
                 <div class="endscreen-text mt-3">
                     <h2><mark>Herzlichen Glückwunsch!</mark></h2>
@@ -47,11 +52,12 @@
                     <img class="width-100" src="./img/trophy.png" alt="Pokal">
                 </div> -->
                 <div class="pb-3">
-                    <span>Du hast <b id="amount-of-right-questions">7</b> von <b id="amount-of-questions">7</b> Fragen richtig</span>
+                    <span>Du hast <b id="amount-of-right-questions">7</b> von <b id="amount-of-questions">7</b> Fragen
+                        richtig</span>
                 </div>
                 <div class="pb-3">
                     <button onclick="shareResult()" class="btn text-white">share</button>
-                    <button onclick="playAgain()" class="btn text-white">play again</button>
+                    <button onclick="restartGame()" class="btn text-white">play again</button>
                 </div>
             </div>
 

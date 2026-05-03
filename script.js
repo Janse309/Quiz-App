@@ -4,23 +4,37 @@ let rightQuestions = 0;
 function init() {
     document.getElementById('all-questions').innerHTML = questions.length;
 
-    showQuestion();
+    showContent();
+}
+
+function showContent() {
+    if (currentQuestion >= questions.length) {
+        showEndScreen();
+    } else { // show next question
+        showQuestion();
+        let percent = (currentQuestion + 1) / questions.length;
+        percent = Math.round(percent * 100); // Runden
+        document.getElementById('progress-bar').innerHTML = `${percent} %`;
+        document.getElementById('progress-bar').style.width = `${percent}%`;
+    }
 }
 
 function showQuestion() {
-
-    if (currentQuestion >= questions.length) {
-       showEndScreen();
-    } else{
     let question = questions[currentQuestion];
-
     document.getElementById('question-number').innerHTML = currentQuestion + 1;
     document.getElementById('questiontext').innerHTML = question['question'];
     document.getElementById('answer_1').innerHTML = question['answer_1'];
     document.getElementById('answer_2').innerHTML = question['answer_2'];
     document.getElementById('answer_3').innerHTML = question['answer_3'];
     document.getElementById('answer_4').innerHTML = question['answer_4'];
-    }
+}
+
+function showEndScreen() {
+    document.getElementById('question_screen').classList.add('d_none');
+    document.getElementById('endscreen').classList.remove('d_none');
+    document.getElementById('header-image').src = './img/trophy.png';
+    document.getElementById('amount-of-questions').innerHTML = questions.length;
+    document.getElementById('amount-of-right-questions').innerHTML = rightQuestions;
 }
 
 function answer(selection) {
@@ -42,7 +56,7 @@ function nextQuestion() {
     currentQuestion++; // z.B. von 0 auf 1
     document.getElementById('next-button').disabled = true;
     resetAnswerButtons();
-    showQuestion();
+    showContent();
 }
 
 function resetAnswerButtons() {
@@ -52,19 +66,18 @@ function resetAnswerButtons() {
     document.getElementById('answer_4').parentNode.classList.remove('bg-danger', 'bg-success', 'text-white');
 }
 
-function showEndScreen() {
-    document.getElementById('question_screen').classList.add('d_none');
-    document.getElementById('endscreen').classList.remove('d_none');
-    document.getElementById('header-image').src = './img/trophy.png';
-    document.getElementById('amount-of-questions').innerHTML = questions.length;
-    document.getElementById('amount-of-right-questions').innerHTML = rightQuestions;
+function restartGame() {
+    document.getElementById('header-image').src = './img/Group 5.png';
+    currentQuestion = 0;
+    rightQuestions = 0;
+
+    init();
+
+    document.getElementById('endscreen').classList.add('d_none');
+    document.getElementById('question_screen').classList.remove('d_none');
 }
 
-// function playAgain() {
-//     document.getElementById('endscreen').classList.add('d_none');
-//     document.getElementById('question_screen').classList.remove('d_none');
 
-//     document.getElementById('all-questions').innerHTML = [];
-
-//     showQuestion();
-// }
+// to-do:
+// dem zurück button eine funktion geben
+// share button eine funtion geben
