@@ -1,5 +1,7 @@
 let currentQuestion = 0;
 let rightQuestions = 0;
+let AUDIO_SUCCES = new Audio('./sounds/right.mp3');
+let AUDIO_FAIL = new Audio('./sounds/wrong.mp3');
 
 function init() {
     document.getElementById('all-questions').innerHTML = questions.length;
@@ -44,10 +46,12 @@ function answer(selection) {
 
     if (selectedQuestionNumber == question['right_answer']) { // Richtige Frage beantwortet
         document.getElementById(selection).parentNode.classList.add('bg-success', 'text-white'); // wählt das übergeordnete tag aus
+        AUDIO_SUCCES.play();
         rightQuestions++;
     } else {
         document.getElementById(selection).parentNode.classList.add('bg-danger', 'text-white');
         document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success', 'text-white');
+        AUDIO_FAIL.play();
     }
     document.getElementById('next-button').disabled = false;
 }
@@ -81,3 +85,5 @@ function restartGame() {
 // to-do:
 // dem zurück button eine funktion geben
 // share button eine funtion geben
+// Antworten disable machen wenn man eine abgegeben hat
+// responsive machen
