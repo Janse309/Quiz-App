@@ -1,4 +1,5 @@
 let currentQuestion = 0;
+let rightQuestions = 0;
 
 function init() {
     document.getElementById('all-questions').innerHTML = questions.length;
@@ -27,8 +28,9 @@ function answer(selection) {
     let selectedQuestionNumber = selection.slice(-1);
     let idOfRightAnswer = `answer_${question['right_answer']}`
 
-    if (selectedQuestionNumber == question['right_answer']) {
+    if (selectedQuestionNumber == question['right_answer']) { // Richtige Frage beantwortet
         document.getElementById(selection).parentNode.classList.add('bg-success', 'text-white'); // wählt das übergeordnete tag aus
+        rightQuestions++;
     } else {
         document.getElementById(selection).parentNode.classList.add('bg-danger', 'text-white');
         document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success', 'text-white');
@@ -53,14 +55,16 @@ function resetAnswerButtons() {
 function showEndScreen() {
     document.getElementById('question_screen').classList.add('d_none');
     document.getElementById('endscreen').classList.remove('d_none');
-    document.getElementById('main_img').classList.add('d_none');
+    document.getElementById('header-image').src = './img/trophy.png';
+    document.getElementById('amount-of-questions').innerHTML = questions.length;
+    document.getElementById('amount-of-right-questions').innerHTML = rightQuestions;
 }
 
-function playAgain() {
-    document.getElementById('endscreen').classList.add('d_none');
-    document.getElementById('question_screen').classList.remove('d_none');
+// function playAgain() {
+//     document.getElementById('endscreen').classList.add('d_none');
+//     document.getElementById('question_screen').classList.remove('d_none');
 
-    document.getElementById('all-questions').innerHTML = [];
+//     document.getElementById('all-questions').innerHTML = [];
 
-    showQuestion();
-}
+//     showQuestion();
+// }
